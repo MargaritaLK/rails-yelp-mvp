@@ -5,7 +5,6 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    # raise
     @review = Review.new(review_params)
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review.restaurant = @restaurant
@@ -14,7 +13,6 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-
   end
 
   private
@@ -22,5 +20,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:content, :rating)
   end
-
 end
