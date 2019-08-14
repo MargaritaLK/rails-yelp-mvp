@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+## FAKER SEEDS###
+
+Restaurant.destroy_all
+
+5.times do |x|
+  restaurant = Restaurant.new(name: Faker::Coffee.blend_name,
+    address: Faker::Address.full_address, category: 'italian')
+  restaurant.save!
+end

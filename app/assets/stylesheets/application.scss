@@ -11,3 +11,31 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+@import "bootstrap/scss/bootstrap";
+
+
+body {
+  background-color: #D6D7DC;
+  text-decoration:none;
+
+}
+
+
+.container {
+  width: 1200px;
+  background-color: #FBFFFD;
+  height: 1200px;
+  padding: 50px;
+}
+
+
+.list-group-item p{
+  font-size: 12px;
+}
+
+
+.list-group-item {
+  padding: 10px 5px;
+}
